@@ -1,0 +1,18 @@
+{
+  "kind": "刻意設計的測試案例",
+  "slide": 5,
+  "statement": "第四顆衛星是用來測高度的。",
+  "model": {
+    "perMeasurement": "height-only",
+    "estimated": [
+      "X",
+      "Y",
+      "Z",
+      "δtᵣ"
+    ],
+    "geometryRequired": true
+  },
+  "expected": "reject",
+  "source": "GNSS-04",
+  "locator": "開頭及式 (1)–(6)：每筆虛擬距離含同一組坐標未知數及接收機鐘差。"
+}

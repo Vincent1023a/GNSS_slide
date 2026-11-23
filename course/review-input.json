@@ -1,0 +1,277 @@
+{
+  "rows": [
+    {
+      "id": "C01",
+      "slide": 1,
+      "claim": "藍點是手機位置的估計。手機定位服務可能融合 GPS 與 Wi-Fi。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-06",
+          "Simple, battery-efficient location API for Android"
+        ],
+        [
+          "GNSS-07",
+          "Understand what the blue dot means"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C02",
+      "slide": 1,
+      "claim": "先把導航電文整理成星曆和鐘差參數，再用測距碼估計虛擬距離。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-01",
+          "開頭第 2 段"
+        ],
+        [
+          "GNSS-02",
+          "tₖ 及發射時刻定義"
+        ],
+        [
+          "GNSS-03",
+          "Pseudorange 第一、二式"
+        ],
+        [
+          "GNSS-11",
+          "Finding and tracking satellites"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C03",
+      "slide": 1,
+      "claim": "用多顆衛星的觀測解位置和鐘差，位置轉成地圖上的點。四步是教學資料流，接收機持續追蹤。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-04",
+          "開頭及式 (1)–(6)"
+        ],
+        [
+          "GNSS-05",
+          "From Cartesian to Ellipsoidal coordinates"
+        ],
+        [
+          "GNSS-07",
+          "Understand what the blue dot means"
+        ],
+        [
+          "GNSS-11",
+          "Overview 與追蹤迴路"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C04",
+      "slide": 1,
+      "claim": "顯示時以經緯度換算畫面位置。",
+      "topic": "ecef-map",
+      "sources": [
+        [
+          "GNSS-12",
+          "World coordinates 與 Pixel coordinates"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C05",
+      "slide": 2,
+      "claim": "導航電文含星曆和衛星鐘參數。用有效星曆及發射時刻算衛星位置。",
+      "topic": "navigation-message",
+      "sources": [
+        [
+          "GNSS-01",
+          "開頭第 2–3 段"
+        ],
+        [
+          "GNSS-02",
+          "Table 1 與 tₖ"
+        ],
+        [
+          "GNSS-13",
+          "表 20-IV 印刷頁 106–107"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C06",
+      "slide": 3,
+      "claim": "測距碼對齊提供時間差資訊。P 用兩端時刻差乘光速，含鐘差、傳播及反射等項。",
+      "topic": "pseudorange",
+      "sources": [
+        [
+          "GNSS-11",
+          "Finding and tracking satellites"
+        ],
+        [
+          "GNSS-03",
+          "Pseudorange 公式及其變數說明"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C07",
+      "slide": 4,
+      "claim": "理想化二維模型以 Pᵢ = ρᵢ + cδtᵣ 表示，正的接收機鐘差等量增加各半徑。",
+      "topic": "clock-geometry",
+      "sources": [
+        [
+          "GNSS-03",
+          "Pseudorange 觀測式"
+        ],
+        [
+          "GNSS-04",
+          "式 (1) 共用接收機鐘差"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C08",
+      "slide": 5,
+      "claim": "同一單系統時刻，每顆衛星提供一個碼距離觀測。解算四個未知數至少需要四顆衛星及足夠的觀測幾何。更多觀測可用來估計同樣的四個量。",
+      "topic": "single-point",
+      "sources": [
+        [
+          "GNSS-04",
+          "開頭、式 (1)–(6) 與設計矩陣"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C09",
+      "slide": 6,
+      "claim": "ECEF 的 X、Y、Z 可依相容參考橢球轉成緯度、經度、橢球高，經緯度可投影到地圖像素。",
+      "topic": "ecef-map",
+      "sources": [
+        [
+          "GNSS-05",
+          "From Cartesian to Ellipsoidal coordinates"
+        ],
+        [
+          "GNSS-12",
+          "World coordinates、Pixel coordinates"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C10",
+      "slide": 6,
+      "claim": "位置服務可以提供融合後的位置估計，地圖用藍點表示。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-06",
+          "Simple, battery-efficient location API for Android"
+        ],
+        [
+          "GNSS-07",
+          "Understand what the blue dot means"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C11",
+      "slide": 7,
+      "claim": "遮蔽使訊號不可用，反射可能改變碼觀測。橘色線和位移只是教學示意。",
+      "topic": "position-errors",
+      "sources": [
+        [
+          "GNSS-03",
+          "Pseudorange 的多路徑項"
+        ],
+        [
+          "GNSS-08",
+          "Why does GPS sometimes show me in the wrong place?"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C12",
+      "slide": 7,
+      "claim": "手機定位服務也可能融合其他訊號，單看藍點無法識別誤差來源。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-06",
+          "底層 GPS、Wi-Fi 與多感測來源"
+        ],
+        [
+          "GNSS-07",
+          "藍點的不確定性說明"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C13",
+      "slide": 8,
+      "claim": "第一題的答案與回饋以廣播星曆和發射時刻計算衛星位置為依據。",
+      "topic": "navigation-message",
+      "sources": [
+        [
+          "GNSS-01",
+          "開頭第 2 段"
+        ],
+        [
+          "GNSS-13",
+          "表 20-IV 第 1–2 頁"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C14",
+      "slide": 8,
+      "claim": "第二題的答案與回饋以三個坐標及共用接收機鐘差為依據。",
+      "topic": "single-point",
+      "sources": [
+        [
+          "GNSS-04",
+          "開頭及式 (1)"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C15",
+      "slide": 9,
+      "claim": "延伸入口導至同衛星、同碼、對齊觀測的站間一次差。",
+      "topic": "between-receiver",
+      "sources": [
+        [
+          "GNSS-09",
+          "§2.1 第 4 段"
+        ],
+        [
+          "GNSS-10",
+          "§2.4，式 (2.15) 與圖 2.4"
+        ]
+      ],
+      "verdict": "supported"
+    }
+  ],
+  "singlePointModel": {
+    "perMeasurement": "joint-pseudorange",
+    "estimated": [
+      "X",
+      "Y",
+      "Z",
+      "δtᵣ"
+    ],
+    "geometryRequired": true
+  }
+}

@@ -1,0 +1,315 @@
+{
+  "rows": [
+    {
+      "id": "C01",
+      "slide": 1,
+      "claim": "藍點是手機位置的估計。手機定位服務可能融合 GPS 與 Wi-Fi。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-06",
+          "Simple, battery-efficient location API for Android"
+        ],
+        [
+          "GNSS-07",
+          "Understand what the blue dot means"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C02",
+      "slide": 1,
+      "claim": "先把導航電文整理成星曆和鐘差參數，再用測距碼估計虛擬距離。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-01",
+          "開頭第 2 段"
+        ],
+        [
+          "GNSS-02",
+          "tₖ 及發射時刻定義"
+        ],
+        [
+          "GNSS-03",
+          "Pseudorange 第一、二式"
+        ],
+        [
+          "GNSS-11",
+          "Finding and tracking satellites"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C03",
+      "slide": 1,
+      "claim": "用多顆衛星的觀測解位置和鐘差，位置轉成地圖上的點。四步是教學資料流，接收機持續追蹤。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-04",
+          "開頭及式 (1)–(6)"
+        ],
+        [
+          "GNSS-05",
+          "From Cartesian to Ellipsoidal coordinates"
+        ],
+        [
+          "GNSS-07",
+          "Understand what the blue dot means"
+        ],
+        [
+          "GNSS-11",
+          "Overview 與追蹤迴路"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C04",
+      "slide": 1,
+      "claim": "顯示時以經緯度換算畫面位置。",
+      "topic": "ecef-map",
+      "sources": [
+        [
+          "GNSS-12",
+          "World coordinates 與 Pixel coordinates"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C05",
+      "slide": 2,
+      "claim": "導航電文含星曆和衛星鐘參數。用有效星曆及發射時刻算衛星位置。",
+      "topic": "navigation-message",
+      "sources": [
+        [
+          "GNSS-01",
+          "開頭第 2–3 段"
+        ],
+        [
+          "GNSS-02",
+          "Table 1 與 tₖ"
+        ],
+        [
+          "GNSS-13",
+          "表 20-IV 印刷頁 106–107"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C06",
+      "slide": 3,
+      "claim": "測距碼對齊提供時間差資訊。P 用兩端時刻差乘光速，含鐘差、傳播及反射等項。",
+      "topic": "pseudorange",
+      "sources": [
+        [
+          "GNSS-11",
+          "Finding and tracking satellites"
+        ],
+        [
+          "GNSS-03",
+          "Pseudorange 公式及其變數說明"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C07",
+      "slide": 4,
+      "claim": "理想化二維模型以 Pᵢ = ρᵢ + cδtᵣ 表示，正的接收機鐘差等量增加各半徑。",
+      "topic": "clock-geometry",
+      "sources": [
+        [
+          "GNSS-03",
+          "Pseudorange 觀測式"
+        ],
+        [
+          "GNSS-04",
+          "式 (1) 共用接收機鐘差"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C08",
+      "slide": 5,
+      "claim": "同一單系統時刻，每顆衛星提供一個碼距離觀測。解算四個未知數至少需要四顆衛星及足夠的觀測幾何。更多觀測可用來估計同樣的四個量。",
+      "topic": "single-point",
+      "sources": [
+        [
+          "GNSS-04",
+          "開頭、式 (1)–(6) 與設計矩陣"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C09",
+      "slide": 6,
+      "claim": "ECEF 的 X、Y、Z 可依相容參考橢球轉成緯度、經度、橢球高，經緯度可投影到地圖像素。",
+      "topic": "ecef-map",
+      "sources": [
+        [
+          "GNSS-05",
+          "From Cartesian to Ellipsoidal coordinates"
+        ],
+        [
+          "GNSS-12",
+          "World coordinates、Pixel coordinates"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C10",
+      "slide": 6,
+      "claim": "位置服務可以提供融合後的位置估計，地圖用藍點表示。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-06",
+          "Simple, battery-efficient location API for Android"
+        ],
+        [
+          "GNSS-07",
+          "Understand what the blue dot means"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C11",
+      "slide": 7,
+      "claim": "遮蔽使訊號不可用，反射可能改變碼觀測。橘色線和位移只是教學示意。",
+      "topic": "position-errors",
+      "sources": [
+        [
+          "GNSS-03",
+          "Pseudorange 的多路徑項"
+        ],
+        [
+          "GNSS-08",
+          "Why does GPS sometimes show me in the wrong place?"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C12",
+      "slide": 7,
+      "claim": "手機定位服務也可能融合其他訊號，單看藍點無法識別誤差來源。",
+      "topic": "blue-dot",
+      "sources": [
+        [
+          "GNSS-06",
+          "底層 GPS、Wi-Fi 與多感測來源"
+        ],
+        [
+          "GNSS-07",
+          "藍點的不確定性說明"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C13",
+      "slide": 8,
+      "claim": "第一題的答案與回饋以廣播星曆和發射時刻計算衛星位置為依據。",
+      "topic": "navigation-message",
+      "sources": [
+        [
+          "GNSS-01",
+          "開頭第 2 段"
+        ],
+        [
+          "GNSS-13",
+          "表 20-IV 第 1–2 頁"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C14",
+      "slide": 8,
+      "claim": "第二題的答案與回饋以三個坐標及共用接收機鐘差為依據。",
+      "topic": "single-point",
+      "sources": [
+        [
+          "GNSS-04",
+          "開頭及式 (1)"
+        ]
+      ],
+      "verdict": "supported"
+    },
+    {
+      "id": "C15",
+      "slide": 9,
+      "claim": "延伸入口導至同衛星、同碼、對齊觀測的站間一次差。",
+      "topic": "between-receiver",
+      "sources": [
+        [
+          "GNSS-09",
+          "§2.1 第 4 段"
+        ],
+        [
+          "GNSS-10",
+          "§2.4，式 (2.15) 與圖 2.4"
+        ]
+      ],
+      "verdict": "supported"
+    }
+  ],
+  "singlePointModel": {
+    "perMeasurement": "joint-pseudorange",
+    "estimated": [
+      "X",
+      "Y",
+      "Z",
+      "δtᵣ"
+    ],
+    "geometryRequired": true
+  },
+  "recordedAt": "2026-11-23T15:19:12.975Z",
+  "deckSha256": "f53e59ae30a563995c4adadfc570546901f57cacd0ba4a4664b41cbea5902d3e",
+  "evidenceSha256": {
+    "raw/GNSS-01.md": "277d2ead3790b265b03fad5f59023b468f0ac7630b82f9a3c9862b6ce40fb47d",
+    "raw/GNSS-02.md": "8623f1b4b59b50ce8ae2ba85561b729b9f6d7a9b6f08cc606cf38b5f358563d4",
+    "raw/GNSS-03.md": "aff2babe0e2944c903bcdd9c99bf2529c916350f6bf092677993e70a0d1da4ee",
+    "raw/GNSS-04.md": "623fb2133f30c8650961a5dec99c8dc2b8d35bea7d8cc5f48ecbc2eef36c2c69",
+    "raw/GNSS-05.md": "6a0d962c15b3565852443a38e13d0c9ee8c95681b794539a97bcddac4d42b144",
+    "raw/GNSS-06.md": "a3705b715ce69ecb8a430d4133a03ed978c9b1cde6428eefad3ea2ea740fdb8f",
+    "raw/GNSS-07.md": "7b08247481d4c3d2304f8cc9f72d8038d4267397407ca5cc9cd606bcd9494c0e",
+    "raw/GNSS-08.md": "719d8a0988ee04479074981587ebbd2c12b1f7b0541e1f3e7769bdaeae689db9",
+    "raw/GNSS-09.md": "e78d07554a7357660892e3cb0bd95414bdd8684ba32ca2cdf4d3d66ea79d24d5",
+    "raw/GNSS-10.md": "3c72cb727fce5d8dc9416b516c463b2d5c239e18c967bb52da113f56cb98dc01",
+    "raw/GNSS-11.md": "8a5319389aca8132d0563fdd0104a7af11226045d14c2be516777eea91a525ba",
+    "raw/GNSS-12.md": "82c160a6918e7fe19a4cceddc0346f85cd9147ae94ccc18f7da658551204e2c9",
+    "raw/GNSS-13.md": "2e7a15a67558d599ad5eebaebcb80b4b69cfd76f1e1be999de7db82153392de2",
+    "wiki/sources/GNSS-01.md": "df88c0b8406467e8bcbbd36966ad8c9d17c966a282d84feb6f0a87982fa4dcc9",
+    "wiki/sources/GNSS-02.md": "0c2618f64f95a09541772426a54f32725347328c8f2bc677faef86141c6094a7",
+    "wiki/sources/GNSS-03.md": "9207181a644ed8acadefaa9c3e39fe607c0c0b4bee0eb2f121f856026a97ca4a",
+    "wiki/sources/GNSS-04.md": "cbe3cdc26d11bc97688a200abef76844869dd9e4222fdcdaa9860f8406e76ca5",
+    "wiki/sources/GNSS-05.md": "3d1a0300b0cc9fb98cef81b7e49321f21270f7e0d9c199feaf20170e5841f497",
+    "wiki/sources/GNSS-06.md": "7903a63f3ed1521921daf8016f33fec92c4375e30e54479d08c15777880f617b",
+    "wiki/sources/GNSS-07.md": "3b833f27a4a27aa37563266240c5334ecd71c877ad3c3a554b605efc59601258",
+    "wiki/sources/GNSS-08.md": "c08ad8dbb604c56a024295171aeec792c6865641aaf83d66609bd922cf0115ec",
+    "wiki/sources/GNSS-09.md": "cfa356dbb51b8e2cf9693a0d5ac0a7b8d8b38b00887658692084c5b2e513ba17",
+    "wiki/sources/GNSS-10.md": "b7f5adea12fb8c49ca6a75a2de5d4c3cf6b639216c66bdc5b00d2c4b4b84a547",
+    "wiki/sources/GNSS-11.md": "00971cbf0182a345e9242ab9cc321afa22049dc97c568b20f203cfaa9b063535",
+    "wiki/sources/GNSS-12.md": "ff0675812496054e184f2dc232f03f073ed41e9b2401d34f1295f92553d01a35",
+    "wiki/sources/GNSS-13.md": "c4c37ad56983cc74ca13817e7f0fb1d5cfbb4cb029e376385e57af2f99917e8f",
+    "wiki/topics/between-receiver.md": "5fac0112881fb59af928c83eb478a1e845dfa54724b24c5ec2767c886340a894",
+    "wiki/topics/blue-dot.md": "fae9536ccf8256b568750473097130d45feebf6abc7473389faaf904f588c4bc",
+    "wiki/topics/clock-geometry.md": "761589b2930073c620093894fef4b82717b01290f698bc129676476521ac1cba",
+    "wiki/topics/ecef-map.md": "d0f61ead5f8891c620ef7fd323fde304903ff4188f2b735180d2473a80786afe",
+    "wiki/topics/navigation-message.md": "ce83f36207f6d923aab4df861f30c23f059bc3fb5fd0cf43c8c33a4a9b5eaf2c",
+    "wiki/topics/position-errors.md": "ee3f2d471e6ca964b594bcdc3d75d66ff96a3379d6f048867e9a1919ebf72242",
+    "wiki/topics/pseudorange.md": "14fda7094373751aece4b457dfcc4a748be079bc4108989509b4a31440032b34",
+    "wiki/topics/single-point.md": "7d9ffcb27e80a8c2e2739593bb17a7abe34f5450bd56fa0a8e7827f192b9253d"
+  }
+}
